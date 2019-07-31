@@ -241,15 +241,19 @@ class Bike {
   }
 }
 let hamvan = new Car ('Honda', 'Odyssey')
+console.log(hamvan.model)
 console.log(Car.numberOfWheels())
 
 // b. Make a class called `Bike` with properties `gears` and `hasBell`.  Create an instance of `Bike`
 //
 let canondale = new Bike ('fixed', true)
+console.log(canondale.gears)
 console.log(Bike.numberOfWheels());
 
 // c. Give each class a static method called `numberOfWheels` that returns the number of wheels (2 for bikes, 4 for cars).  Why does it make sense for this to be a static method instead of an instance method?
-//
+
+//The number of wheels for Car should always be 4 and for Bike should always be 2. The behavior is true about the class as a whole
+
 // ## Question 8
 //
 // a. Make a class called `Vehicle` with properties `color` and `name`.  Give it a method called `makeSound` which logs "WHHOOSSSH" to the console
@@ -263,6 +267,10 @@ class Vehicle {
     console.log('WHHOOSSSH')
   }
 }
+
+let myVehicle = new Vehicle ('green', 'Doris')
+myVehicle.makeSound();
+
 // b. Modify your `Car` and `Bike` classes from Question 7 to extend the `Vehicle` class.
 //
 class Car2 extends Vehicle {
@@ -288,7 +296,9 @@ class Bike2 extends Vehicle {
 }
 // c. Create a new `Bike` instance that has a `color` of "green" and `name` "Bikey McBikeface"
 //
-let huffy = new Bike('green','Bikey McBikeface')
+let huffy = new Bike2('green','Bikey McBikeface','fixed', false)
+console.log(huffy.name)
 
 // d. Create a new `Car` instance that has a `color` of "red" and `name` "Carry McCarface"
-let newHotness = new Car('red', 'CarryMcCarface')
+let newHotness = new Car2('red', 'CarryMcCarface','Dodge', 'Charger')
+console.log(newHotness.color)
